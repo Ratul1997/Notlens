@@ -12,11 +12,19 @@ function TopNav() {
         <span class="caret"></span>
       </button>
       <ul class="dropdown-menu">
-        <li class="dropdown_list">
+
+      <li class="dropdown_list">
           <a href="/online_players">
+          <span class="material-icons dropdown_icon0">games</span> Game
+          </a>
+      </li>
+
+        <li class="dropdown_list">
+          <a href="/settings">
             <span class="material-icons dropdown_icon">settings</span> Settings
           </a>
         </li>
+
         <li class="dropdown_list">
           <a href="/chatting">
             <span class="material-icons dropdown_icon2">chat</span>Chatting

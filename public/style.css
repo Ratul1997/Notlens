@@ -38,6 +38,7 @@
   top: 0;
   margin: auto;
 }
+
 .waveWrapperInner {
   position: absolute;
   width: 100%;
@@ -77,18 +78,21 @@
   -webkit-animation: move-wave 3s;
   -webkit-animation-delay: 1s;
   animation-delay: 1s;
+  background-image: url("http://front-end-noobs.com/jecko/img/wave-top.png");
 }
 .waveMiddle {
   background-size: 50% 120px;
 }
 .waveAnimation .waveMiddle {
   animation: move_wave 10s linear infinite;
+  background-image: url("http://front-end-noobs.com/jecko/img/wave-mid.png");
 }
 .waveBottom {
   background-size: 50% 100px;
 }
 .waveAnimation .waveBottom {
   animation: move_wave 15s linear infinite;
+  background-image: url("http://front-end-noobs.com/jecko/img/wave-bot.png");
 }
 
 .container {
@@ -480,7 +484,6 @@ img.profile-photo-lg {
 .congrats {
   position: absolute;
   top: 120px;
-  width: 550px;
   height: 100px;
   padding: 20px 10px;
   text-align: center;
@@ -831,14 +834,19 @@ h1 {
   text-decoration: none;
   font-weight: 500;
 }
-.dropdown_icon {
+.dropdown_icon0 {
   position: absolute;
   top: 15px;
   left: 15px;
 }
-.dropdown_icon2 {
+.dropdown_icon {
   position: absolute;
   top: 50px;
+  left: 15px;
+}
+.dropdown_icon2 {
+  position: absolute;
+  top: 84px;
   left: 15px;
 }
 .dropdown_icon3 {
@@ -940,6 +948,71 @@ h1 {
     0 7px 10px -5px rgb(156 39 176 / 40%);
 }
 
+@media (max-width: 960px) {
+  .content {
+    padding: 30px 0px;
+  }
+
+  .container-fluid {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+
+  .card-profile {
+    margin-top: 0px;
+    text-align: center;
+  }
+  .card-avater {
+    max-width: 130px;
+    max-height: 130px;
+    margin: -50px auto 0;
+    border-radius: 50%;
+    overflow: hidden;
+    padding: 0;
+    box-shadow: 0 16px 38px -12px rgb(0 0 0 / 56%),
+      0 4px 25px 0 rgb(0 0 0 / 12%), 0 8px 10px -5px rgb(0 0 0 / 20%);
+  }
+
+  .card-profile .card-avatar + .card-body {
+    margin-top: 15px;
+  }
+  .dark-edition .card .card-body .card-category + .card-title {
+    color: #fff;
+  }
+  .dark-edition .btn.btn-primary {
+    color: #fff;
+    background-color: #913f9e;
+    border-color: #913f9e;
+    box-shadow: 0 2px 2px 0 rgb(145 63 158 / 14%),
+      0 3px 1px -2px rgb(145 63 158 / 20%), 0 1px 5px 0 rgb(145 63 158 / 12%);
+  }
+  .img {
+    border-radius: 50%;
+    box-shadow: 0 16px 38px -12px rgb(0 0 0 / 56%),
+      0 4px 25px 0 rgb(0 0 0 / 12%), 0 8px 10px -5px rgb(0 0 0 / 20%);
+  }
+  .card-title {
+    font-size: 16px;
+  }
+  .card-category {
+    font-size: 16px;
+  }
+  .img_avatar {
+    width: 40px;
+    height: 40px;
+  }
+
+  .img_avatar:hover {
+    transform: scale(1.1);
+  }
+  .back_purple {
+    padding: 10px;
+  }
+  .card {
+    margin-bottom: 15px;
+  }
+}
+
 /*chating page Styling */
 
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700);
@@ -1015,49 +1088,58 @@ h1 {
   border-bottom-right-radius: 5px;
   color: #1e1f21;
 }
-.chat .chat-header {
+
+.chat_congress {
+  background: url(./images/chat.png);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  color: #1e1f21;
+  max-width: 70%;
+  margin: 0 auto;
+}
+.chat-header {
   padding: 20px;
   border-bottom: 2px solid white;
 }
-.chat .chat-header img {
+.chat-header img {
   float: left;
 }
-.chat .chat-header .chat-about {
+.chat-header .chat-about {
   float: left;
   padding-left: 10px;
   margin-top: 6px;
 }
-.chat .chat-header .chat-with {
+.chat-header .chat-with {
   font-weight: bold;
   font-size: 16px;
 }
-.chat .chat-header .chat-num-messages {
+.chat-header .chat-num-messages {
   color: #4e4e4e;
 }
-.chat .chat-header .fa-star {
+.chat-header .fa-star {
   float: right;
   color: #616161;
   font-size: 20px;
   margin-top: 12px;
 }
-.chat .chat-history {
+.chat-history {
   padding: 30px 30px 20px;
   border-bottom: 2px solid white;
   overflow-y: scroll;
   height: 350px;
 }
 
-.chat .chat-history > ul {
+.chat-history > ul {
   list-style: none;
 }
-.chat .chat-history .message-data {
+.chat-history .message-data {
   margin-bottom: 15px;
 }
-.chat .chat-history .message-data-time {
+.chat-history .message-data-time {
   color: #a8aab1;
   padding-left: 6px;
 }
-.chat .chat-history .message {
+.chat-history .message {
   color: white;
   padding: 18px 20px;
   line-height: 26px;
@@ -1067,7 +1149,7 @@ h1 {
   width: 90%;
   position: relative;
 }
-.chat .chat-history .message:after {
+.chat-history .message:after {
   bottom: 100%;
   left: 7%;
   border: solid transparent;
@@ -1080,21 +1162,21 @@ h1 {
   border-width: 10px;
   margin-left: -10px;
 }
-.chat .chat-history .my-message {
+.chat-history .my-message {
   background: #ebebeb !important;
   color: #646464;
 }
-.chat .chat-history .other-message {
+.chat-history .other-message {
   background: #05728f;
 }
-.chat .chat-history .other-message:after {
+.chat-history .other-message:after {
   border-bottom-color: #94c2ed;
   left: 93%;
 }
-.chat .chat-message {
+.chat-message {
   padding: 30px;
 }
-.chat .chat-message textarea {
+.chat-message textarea {
   width: 100%;
   border: none;
   padding: 10px 20px;
@@ -1103,13 +1185,13 @@ h1 {
   border-radius: 5px;
   resize: none;
 }
-.chat .chat-message .fa-file-o,
-.chat .chat-message .fa-file-image-o {
+.chat-message .fa-file-o,
+.chat-message .fa-file-image-o {
   font-size: 16px;
   color: gray;
   cursor: pointer;
 }
-.chat .chat-message button {
+.chat-message button {
   float: right;
   color: #94c2ed;
   font-size: 16px;
@@ -1119,8 +1201,100 @@ h1 {
   font-weight: bold;
   background: #f2f5f8;
 }
-.chat .chat-message button:hover {
+.chat-message button:hover {
   color: #75b1e8;
+}
+
+@media (max-width: 960px) {
+  .chatList {
+    margin: -10px;
+  }
+  .people-list .row .col {
+    margin: 0;
+  }
+  .mainBox {
+    width: 100%;
+    margin: 0px;
+  }
+
+  .people-list ul {
+    padding: 0px;
+  }
+  .people-list ul li {
+    padding-bottom: 10px;
+  }
+
+  .people-list img {
+    width: 20px;
+    height: 20px;
+  }
+  .about .name,
+  .status {
+    font-size: 10px;
+    margin-top: -2px;
+  }
+
+  .about .status {
+    margin-top: -8px;
+  }
+
+  .chat-history {
+    padding: 5px 5px 5px;
+  }
+  .chat_congress {
+    max-width: 80%;
+  }
+
+  .chat-header .chat-with {
+    font-size: 12px;
+  }
+  .chat-header .chat-num-messages {
+    color: #4e4e4e;
+    font-size: 10px;
+  }
+  .chat-header .fa-star {
+    font-size: 16pxpx;
+    margin-top: 8px;
+  }
+
+  .chat-history .message {
+    font-size: 12px;
+  }
+  .message-data-name {
+    font-size: 12px;
+  }
+
+  .message-data-time {
+    font-size: 12px;
+  }
+
+  .chat-message textarea {
+    font: 12px/20px "Lato", Arial, sans-serif;
+  }
+  .chat-message .fa-file-o,
+  .chat-message .fa-file-image-o {
+    font-size: 12px;
+  }
+  .chat-message button {
+    font-size: 12px;
+  }
+  .chat-header img {
+    float: left;
+    width: 31px;
+  }
+  .chat-header {
+    padding: 5px;
+  }
+  .chatBOX {
+    margin: 0px !important;
+    margin-top: 2rem !important;
+  }
+}
+
+@media (max-width: 560px) {
+  .chat_congress {
+    max-width: 100%;
+  }
 }
 
 .online,
@@ -1161,4 +1335,75 @@ h1 {
   content: " ";
   clear: both;
   height: 0;
+}
+
+/* card styling*/
+
+.cards {
+  position: relative;
+  text-align: center;
+  color: #fff;
+  background-color: rgb(142 142 142 / 10%);
+  border: 1px solid;
+  border-color: #fff8 transparent transparent #fff8;
+  border-radius: 8px;
+  box-shadow: 1em 1em 0.5em #0008;
+  transform-style: preserve-3d;
+  width: 100%;
+  max-width: 300px;
+  cursor: pointer;
+  margin-top: 2rem;
+}
+
+.cards .user-img {
+  background-image: url("https://media-exp1.licdn.com/dms/image/C4D03AQGTjisRUZue0A/profile-displayphoto-shrink_800_800/0/1525812704149?e=1622073600&v=beta&t=yUgFiKu3oLPtfL5tOij1syOSfOqsDiSax0wd0UcpuHc");
+  background-size: contain;
+  width: 140px;
+  height: 140px;
+  margin: auto;
+  border: 1px solid white;
+  border-radius: 4px;
+}
+
+.cards .front,
+.cards .back {
+  backface-visibility: hidden;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+  height: 100%;
+  backdrop-filter: blur(0.2em);
+}
+
+.cards .back {
+  position: absolute;
+  top: 0;
+  transform: rotateY(180deg);
+}
+
+.cards .back .user-img {
+  background-image: url("https://www.antonella-testa.com/images/blog-desktop.jpg");
+}
+
+.full_wrapper {
+  margin-top: 70px;
+}
+
+@media (max-width: 560px) {
+  .cards .user-img {
+    width: 69px;
+    height: 69px;
+    margin: auto;
+    border: 1px solid white;
+    border-radius: 4px;
+  }
+
+  .cards .front,
+  .cards .back {
+    padding-bottom: 0rem;
+    backdrop-filter: blur(0.2em);
+  }
+  .name_gamer {
+    font-size: 13px;
+    margin-top: 5px !important;
+  }
 }

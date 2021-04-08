@@ -20,9 +20,8 @@ function OnlinePlayersModal() {
                   <div className="col-12">
                     <form>
                       <input
-                        className="search"
+                        className="search mb-3"
                         type="text"
-                        className="mb-3"
                         name="search"
                         placeholder="Search.."
                       />

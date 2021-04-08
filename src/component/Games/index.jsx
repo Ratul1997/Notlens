@@ -21,11 +21,11 @@ function Games() {
           </div>
         </section>
 
-        <div className="row justify-content-center mb-30-none ">
+        <div className="row justify-content-center mb-30-none full_wrapper">
           <div className="col-4 game_item_wrapper_hidden_1">
             <div
               onclick="comeWrapper1()"
-              className="gamer-item_hidden section-bg-2 animate__animated animate__lightSpeedInLeft animate__delay-0.2s"
+              className="gamer-item_hidden d-none section-bg-2 animate__animated animate__lightSpeedInLeft animate__delay-0.2s"
             >
               <div className="gamer-thumb_hidden"></div>
             </div>
@@ -40,6 +40,17 @@ function Games() {
               </h5>
             </div>
           </div> */}
+
+            <div class="cards  animate__animated  animate__flip animate__delay-0.25s">
+              <div class="front">
+                <div class="user-img"></div>
+                <h4 className="mt-4 name_gamer">Antonella Testa</h4>
+              </div>
+
+              <div class="back">
+                <div class="user-img"></div>
+              </div>
+            </div>
           </div>
 
           <div className="col-4 game_item_wrapper_hidden_2 ">

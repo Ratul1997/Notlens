@@ -1,12 +1,25 @@
-import React from "react";
+import React,{useState,useEffect} from "react";
 import Footer from "../../common/Footer";
 import TopNav from "../../common/TopNav";
 function Congratulation() {
+  const [displayChat,setDisplayChat] = useState('none');
+  const [displayCongress,setDisplayCongress] = useState('block');
+  const openChat= ()=>{
+    setDisplayCongress('none');
+    setDisplayChat('block');
+  }
+
+
+
+ 
+
+
+
   return (
     <>
       <TopNav />
       <div class="container">
-        <div class="congrats text-center">
+        <div class="congrats text-center" style={{display:displayCongress}}>
           <h1 class="congrats_title mb-3">Congratulations!</h1>
 
           <div class="box mt-5">
@@ -24,221 +37,100 @@ function Congratulation() {
             </a>
           </div>
           <a
-            onclick="openChat()"
+            onClick={openChat}
             class="btn btn-lg btn-primary mt-1 animate__animated animate__zoomInDown  animate__delay-1.5s"
           >
             Start Chat
           </a>
         </div>
-        <div class="chatBox d-none animate__animated animate__slideInRight">
-          <h3 class=" text-center">Messaging</h3>
-          <div class="messaging">
-            <div class="inbox_msg">
-              <div class="mesgs">
-                <div class="msg_history">
-                  <div class="incoming_msg">
-                    <div class="incoming_msg_img">
-                      <img
-                        src="https://ptetutorials.com/images/user-profile.png"
-                        alt="sunil"
-                      />{" "}
-                    </div>
-                    <div class="received_msg">
-                      <div class="received_withd_msg">
-                        <p>
-                          Test which is a new approach to have all solutions
-                        </p>
-                        <span class="time_date"> 11:01 AM | June 9</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="outgoing_msg">
-                    <div class="sent_msg">
-                      <p>Test which is a new approach to have all solutions</p>
-                      <span class="time_date"> 11:01 AM | June 9</span>{" "}
-                    </div>
-                  </div>
-                  <div class="incoming_msg">
-                    <div class="incoming_msg_img">
-                      {" "}
-                      <img
-                        src="https://ptetutorials.com/images/user-profile.png"
-                        alt="sunil"
-                      />{" "}
-                    </div>
-                    <div class="received_msg">
-                      <div class="received_withd_msg">
-                        <p>Test, which is a new approach to have</p>
-                        <span class="time_date"> 11:01 AM | Yesterday</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="outgoing_msg">
-                    <div class="sent_msg">
-                      <p>Apollo University, Delhi, India Test</p>
-                      <span class="time_date"> 11:01 AM | Today</span>{" "}
-                    </div>
-                  </div>
-                  <div class="outgoing_msg">
-                    <div class="sent_msg">
-                      <p>Apollo University, Delhi, India Test</p>
-                      <span class="time_date"> 11:01 AM | Today</span>{" "}
-                    </div>
-                  </div>
-                  <div class="incoming_msg">
-                    <div class="incoming_msg_img">
-                      {" "}
-                      <img
-                        src="https://ptetutorials.com/images/user-profile.png"
-                        alt="sunil"
-                      />{" "}
-                    </div>
-                    <div class="received_msg">
-                      <div class="received_withd_msg">
-                        <p>Test, which is a new approach to have</p>
-                        <span class="time_date"> 11:01 AM | Yesterday</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="incoming_msg">
-                    <div class="incoming_msg_img">
-                      {" "}
-                      <img
-                        src="https://ptetutorials.com/images/user-profile.png"
-                        alt="sunil"
-                      />{" "}
-                    </div>
-                    <div class="received_msg">
-                      <div class="received_withd_msg">
-                        <p>Test, which is a new approach to have</p>
-                        <span class="time_date"> 11:01 AM | Yesterday</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="outgoing_msg">
-                    <div class="sent_msg">
-                      <p>Apollo University, Delhi, India Test</p>
-                      <span class="time_date"> 11:01 AM | Today</span>{" "}
-                    </div>
-                  </div>
-                  <div class="incoming_msg">
-                    <div class="incoming_msg_img">
-                      {" "}
-                      <img
-                        src="https://ptetutorials.com/images/user-profile.png"
-                        alt="sunil"
-                      />{" "}
-                    </div>
-                    <div class="received_msg">
-                      <div class="received_withd_msg">
-                        <p>
-                          We work directly with our designers and suppliers, and
-                          sell direct to you, which means quality, exclusive
-                          products, at a price anyone can afford.
-                        </p>
-                        <span class="time_date"> 11:01 AM | Today</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="incoming_msg">
-                    <div class="incoming_msg_img">
-                      {" "}
-                      <img
-                        src="https://ptetutorials.com/images/user-profile.png"
-                        alt="sunil"
-                      />{" "}
-                    </div>
-                    <div class="received_msg">
-                      <div class="received_withd_msg">
-                        <p>Test, which is a new approach to have</p>
-                        <span class="time_date"> 11:01 AM | Yesterday</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="incoming_msg">
-                    <div class="incoming_msg_img">
-                      {" "}
-                      <img
-                        src="https://ptetutorials.com/images/user-profile.png"
-                        alt="sunil"
-                      />{" "}
-                    </div>
-                    <div class="received_msg">
-                      <div class="received_withd_msg">
-                        <p>Test, which is a new approach to have</p>
-                        <span class="time_date"> 11:01 AM | Yesterday</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="incoming_msg">
-                    <div class="incoming_msg_img">
-                      {" "}
-                      <img
-                        src="https://ptetutorials.com/images/user-profile.png"
-                        alt="sunil"
-                      />{" "}
-                    </div>
-                    <div class="received_msg">
-                      <div class="received_withd_msg">
-                        <p>Test, which is a new approach to have</p>
-                        <span class="time_date"> 11:01 AM | Yesterday</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="incoming_msg">
-                    <div class="incoming_msg_img">
-                      {" "}
-                      <img
-                        src="https://ptetutorials.com/images/user-profile.png"
-                        alt="sunil"
-                      />{" "}
-                    </div>
-                    <div class="received_msg">
-                      <div class="received_withd_msg">
-                        <p>Test, which is a new approach to have</p>
-                        <span class="time_date"> 11:01 AM | Yesterday</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="incoming_msg">
-                    <div class="incoming_msg_img">
-                      {" "}
-                      <img
-                        src="https://ptetutorials.com/images/user-profile.png"
-                        alt="sunil"
-                      />{" "}
-                    </div>
-                    <div class="received_msg">
-                      <div class="received_withd_msg">
-                        <p>Test, which is a new approach to have</p>
-                        <span class="time_date"> 11:01 AM | Yesterday</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="type_msg">
-                  <div class="input_msg_write">
-                    <div class="row btnrow">
-                      <div class="col-10">
-                        <input
-                          type="text"
-                          class="write_msg"
-                          placeholder="Type a message"
-                        />
-                      </div>
+     
+          <div class="row m-5 chatBOX animate__animated animate__slideInRight" style={{display:displayChat}}>           
+              <div class="chat_congress">
+                <div class="chat-header clearfix">
+                  <img
+                    src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/chat_avatar_01_green.jpg"
+                    alt="avatar"
+                  />
 
-                      <div class="col-2 inputbtn">
-                        <button class="msg_send_btn" type="button">
-                          <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
-                        </button>
-                      </div>
-                    </div>
+                  <div class="chat-about">
+                    <div class="chat-with">Chat with Vincent Porter</div>
+                    <div class="chat-num-messages">already 1 902 messages</div>
                   </div>
+                  <i class="fa fa-star"></i>
+                </div>
+
+                <div class="chat-history">
+                  <ul>
+                    <li class="clearfix">
+                      <div class="message-data align-right  animate__animated animate__rollIn">
+                        <span class="message-data-time">10:10 AM, Today</span>{" "}
+                        &nbsp; &nbsp;
+                        <span class="message-data-name">Olia</span>{" "}
+                        <i class="fa fa-circle me"></i>
+                      </div>
+                      <div class="message other-message float-right  animate__animated animate__rollIn">
+                        Hi Vincent, how are you? How is the project coming
+                        along?
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="message-data  animate__animated animate__rollIn">
+                        <span class="message-data-name">
+                          <i class="fa fa-circle online"></i> Vincent
+                        </span>
+                        <span class="message-data-time">10:12 AM, Today</span>
+                      </div>
+                      <div class="message my-message  animate__animated animate__rollIn">
+                        Are we meeting today? Project has been already finished
+                        and I have results to show you.
+                      </div>
+                    </li>
+
+                    <li class="clearfix">
+                      <div class="message-data align-right  animate__animated animate__rollIn">
+                        <span class="message-data-time">10:14 AM, Today</span>{" "}
+                        &nbsp; &nbsp;
+                        <span class="message-data-name">Olia</span>{" "}
+                        <i class="fa fa-circle me"></i>
+                      </div>
+                      <div class="message other-message float-right  animate__animated animate__rollIn">
+                        Well I am not sure. The rest of the team is not here
+                        yet. Maybe in an hour or so? Have you faced any problems
+                        at the last phase of the project?
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="message-data  animate__animated animate__rollIn">
+                        <span class="message-data-name">
+                          <i class="fa fa-circle online"></i> Vincent
+                        </span>
+                        <span class="message-data-time">10:20 AM, Today</span>
+                      </div>
+                      <div class="message my-message  animate__animated animate__rollIn">
+                        Actually everything was fine. I'm very excited to show
+                        this to our team.
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="chat-message clearfix">
+                  <textarea
+                    name="message-to-send"
+                    id="message-to-send"
+                    placeholder="Type your message"
+                    rows="3"
+                  ></textarea>
+                  <i class="fa fa-file-o"></i> &nbsp;&nbsp;&nbsp;
+                  <i class="fa fa-file-image-o"></i>
+                  <button>Send</button>
                 </div>
               </div>
-            </div>
+            
           </div>
-        </div>
+      
       </div>
       <Footer />
     </>

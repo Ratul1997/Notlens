@@ -7,7 +7,7 @@ function Chatting() {
       <TopNav />
       <div class="container">
         <div class="container_chat clearfix mt-4">
-          <div class="row">
+          <div class="row mainBox">
             <div class="col-4 chatList">
               <div class="people-list" id="people-list">
                 <div class="search_chatlist">
