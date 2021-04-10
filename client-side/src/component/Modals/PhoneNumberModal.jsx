@@ -11,47 +11,6 @@ function PhoneNumberModal() {
   const [submit, setSubmit] = useState(false);
   const [error, setError] = useState(false);
 
-  // useEffect(() => {
-  //   window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier(
-  //     "recaptcha-container",
-  //     {
-  //       size: "invisible"
-  //       // other options
-  //     }
-  //   );
-  // }, []);
-
-  const phoneAuth = () => {
-    window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier(
-      "recaptcha-container",
-      {
-        size: "invisible",
-        callback: response => {
-          // reCAPTCHA solved, allow signInWithPhoneNumber.
-          onSignInSubmit();
-        }
-      }
-    );
-  };
-  const onSignInSubmit = () => {
-    const phoneNumber = state.phoneNumber;
-    const appVerifier = window.recaptchaVerifier;
-    firebase
-      .auth()
-      .signInWithPhoneNumber(phoneNumber, appVerifier)
-      .then(confirmationResult => {
-        // SMS sent. Prompt user to type the code from the message, then sign the
-        // user in with confirmationResult.confirm(code).
-        window.confirmationResult = confirmationResult;
-        // ...
-        console.log(confirmationResult);
-      })
-      .catch(error => {
-        // Error; SMS not sent
-        // ...
-        console.log(error);
-      });
-  };
   const handleClick = e => {
     // console.log(e);
     e.preventDefault();
@@ -60,7 +19,7 @@ function PhoneNumberModal() {
     const { phoneNumber, password } = state;
 
     if (phoneNumber.length === 11 && password.length >= 6) {
-      phoneAuth();
+      
     } else {
       console.log(error);
       setError(true);
