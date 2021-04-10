@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter, Switch } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 import PublicRoute from "./PublicRoute";
 import PrivateRoute from "./PrivateRoute";
 import Games from "../component/Games";
@@ -13,15 +13,18 @@ class AppNavigation extends Component {
   render() {
     return (
       <BrowserRouter>
-        <Switch>
-          {/* <PublicRoute /> */}
+        {/* <Switch> */}
+        {/* <PublicRoute />
           <PublicRoute component={LoginPage} path='/' exact/>
           <PublicRoute component={OnlinePlayers} path='/online_players' exact/>
           <PublicRoute component={Games} path="/games" exact />
           <PublicRoute component={Chatting} path="/chatting" exact />
           <PublicRoute component={Settings} path="/settings" exact />
-          <PublicRoute component={Congratulation} path="/congratulations" exact />
-        </Switch>
+          <PublicRoute component={Congratulation} path="/congratulations" exact /> */}
+        {/* </Switch> */}
+
+        <Route path="/" exact component={LoginPage} />
+        <Route path="/online_players" component={OnlinePlayers} />
       </BrowserRouter>
     );
   }

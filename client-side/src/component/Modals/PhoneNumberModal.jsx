@@ -1,8 +1,12 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState, useEffect } from "react";
+import { withRouter } from "react-router-dom";
 import { history } from "../../history/history";
 import firebase from "../../firebase/firbase";
-function PhoneNumberModal() {
+import { Link } from "react-router-dom";
+function PhoneNumberModal(props) {
+  
+  const {history} = props
   const initialState = {
     phoneNumber: "",
     password: ""
@@ -19,7 +23,7 @@ function PhoneNumberModal() {
     const { phoneNumber, password } = state;
 
     if (phoneNumber.length === 11 && password.length >= 6) {
-      
+      history.replace(`/online_players?phoneNumber=${phoneNumber}`);
     } else {
       console.log(error);
       setError(true);
@@ -104,4 +108,4 @@ function PhoneNumberModal() {
   );
 }
 
-export default PhoneNumberModal;
+export default withRouter(PhoneNumberModal);
